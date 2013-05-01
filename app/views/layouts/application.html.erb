@@ -1,20 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title><%= full_title(yield(:title)) %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+  	<title><%= full_title(yield(:title)) %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
+	<link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+  </style>
+  <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
+
 <body>
 
 	<%= render 'layouts/header' %>
 	
-	<div class="container">
+	<div class="container-fluid">
+		
 		<%= yield %>
+		
 		<%= render 'layouts/footer' %>
 	</div>
 
+
+	
+		
 </body>
 </html>

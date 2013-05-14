@@ -10,9 +10,9 @@ describe "Static pages" do
     it { should_not have_selector 'title', text: '| Home' }
   end
   
-  describe "Help page" do
+  describe "Medications page" do
     before { visit help_path }
-    it { should have_selector('h1',    text: 'Help') }
+    it { should have_selector('h1',    text: 'Medications') }
     it { should have_selector('title', text: full_title('')) }
   end
   

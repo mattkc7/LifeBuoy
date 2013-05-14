@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
   
   def contact
   end
+  
+  def newrequest
+  end
+  
+  def profile
+  end
 end
